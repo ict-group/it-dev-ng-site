@@ -29,6 +29,7 @@
               "src/assets/less/mediaelementplayer.css",
               "src/assets/fonts/icomoon/style.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeicons/primeicons.css",
               "src/assets/less/style.less"
             ],

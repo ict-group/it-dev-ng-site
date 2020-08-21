@@ -5,21 +5,6 @@
         <h1 class="mb-3">Tell Your Story to the World</h1>
         <a href="author.html">Mike Smith </a><span class="mx-2"></span> Jun 25,
         2020 <span class="mx-2"></span> 1:30:20
-        <div class="play-wrap">
-          <div class="player">
-            <audio
-              id="player2"
-              preload="none"
-              controls
-              style="max-width: 100%;"
-            >
-              <source
-                src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3"
-                type="audio/mp3"
-              />
-            </audio>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -101,52 +86,6 @@
         possimus unde provident voluptates labore, exercitationem eius quisquam
         perspiciatis! Similique, facilis.
       </p>
-    </div>
-  </div>
-</div>
-<div class="site-section">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-md-12 text-center">
-        <h3 class="font-weight-bold text-black">Related Podcasts</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <p-table [value]="podcasts" [rows]="10" [paginator]="true">
-          <ng-template pTemplate="body" let-podcasts>
-            <tr>
-              <td>
-                <div
-                  class="d-block d-md-flex podcast-entry bg-white mb-5"
-                  data-aos="fade-up"
-                >
-                  <div class="text">
-                    <img
-                      src="assets/images/person_1.jpg"
-                      alt="Image"
-                      class="img-author"
-                    />
-                    <h3 class="font-weight-light">
-                      <a [routerLink]="['/podcast-detail', podcasts.id]"
-                        >Mario Rossi: Lavorare in Microsoft</a
-                      >
-                    </h3>
-                    <div class="text-white mb-3">
-                      <span class="text-black-opacity-05"
-                        ><small
-                          >By Mike Smith <span class="sep">/</span> 16 September
-                          2017 <span class="sep">/</span> 1:30:20</small
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </ng-template>
-        </p-table>
-      </div>
     </div>
   </div>
 </div>

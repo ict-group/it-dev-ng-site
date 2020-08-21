@@ -23,12 +23,7 @@
       </div>
 
       <div class="col-lg-8">
-        <p-table
-          [value]="podcasts"
-          [rows]="10"
-          [showCurrentPageReport]="true"
-          [paginator]="true"
-        >
+        <p-table [value]="podcasts" [rows]="10" [paginator]="true">
           <ng-template pTemplate="body" let-podcasts>
             <tr>
               <td>

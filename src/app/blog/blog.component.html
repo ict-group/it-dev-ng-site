@@ -2,13 +2,13 @@
   <div class="row align-items-center">
     <div class="col-lg-12">
       <h1 class="mb-6 display-3 text-center">
-        Podcasts
+        Blog
       </h1>
     </div>
 
     <div class="col-lg-8 offset-lg-2">
-      <p-table [value]="podcasts" [rows]="10" [paginator]="true">
-        <ng-template pTemplate="body" let-podcasts>
+      <p-table [value]="blog" [rows]="10" [paginator]="true">
+        <ng-template pTemplate="body" let-blog>
           <tr>
             <td>
               <div
@@ -22,17 +22,22 @@
                     class="img-author"
                   />
                   <h3 class="font-weight-light">
-                    <a [routerLink]="['/podcast-detail', podcasts.id]"
+                    <a [routerLink]="['/blog-detail', blog.id]"
                       >Mario Rossi: Lavorare in Microsoft</a
                     >
                   </h3>
                   <div class="text-white mb-3">
-                    <span class="text-black-opacity-05"
-                      ><small
+                    <span class="text-black-opacity-05">
+                      <small
                         >By Mike Smith <span class="sep">/</span> 16 September
                         2017 <span class="sep">/</span> 1:30:20</small
-                      ></span
-                    >
+                      >
+                      <div class="clearfix"></div>
+                      Matt: Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Unde labore fugit earum beatae, qui autem asperiores
+                      harum quibusdam nulla in suscipit iure consequatur,
+                      laborum, inventore libero odit rem, dolore. Itaque?
+                    </span>
                   </div>
                 </div>
               </div>
