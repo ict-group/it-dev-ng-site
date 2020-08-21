@@ -1,0 +1,67 @@
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="author-image">
+          <img
+            src="assets/images/person_2.jpg"
+            alt="Image"
+            class="img-fluid mr-2"
+          />
+        </div>
+
+        <h1 class="font-weight-bold">Garry Smith</h1>
+        <span>Rimini</span>
+        <div class="clearfix"></div>
+        <br />
+        <p class="text-left">
+          Matt: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+          labore fugit earum beatae, qui autem asperiores harum quibusdam nulla
+          in suscipit iure consequatur, laborum, inventore libero odit rem,
+          dolore. Itaque?
+        </p>
+      </div>
+
+      <div class="col-lg-8">
+        <p-table
+          [value]="podcasts"
+          [rows]="10"
+          [showCurrentPageReport]="true"
+          [paginator]="true"
+        >
+          <ng-template pTemplate="body" let-podcasts>
+            <tr>
+              <td>
+                <div
+                  class="d-block d-md-flex podcast-entry bg-white mb-5"
+                  data-aos="fade-up"
+                >
+                  <div class="text">
+                    <img
+                      src="assets/images/person_1.jpg"
+                      alt="Image"
+                      class="img-author"
+                    />
+                    <h3 class="font-weight-light">
+                      <a [routerLink]="['/podcast-detail', podcasts.id]"
+                        >Mario Rossi: Lavorare in Microsoft</a
+                      >
+                    </h3>
+                    <div class="text-white mb-3">
+                      <span class="text-black-opacity-05"
+                        ><small
+                          >By Mike Smith <span class="sep">/</span> 16 September
+                          2017 <span class="sep">/</span> 1:30:20</small
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>
