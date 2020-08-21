@@ -28,4 +28,4 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: home/runner/work/it-developern-ng/it-developern-ng/dist/it-developern-ng/
+        local-dir: /home/runner/work/it-developern-ng/it-developern-ng/dist/it-developern-ng/
