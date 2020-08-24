@@ -29,3 +29,4 @@ jobs:
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist/it-developern-ng/
+        git-ftp-args: --all
