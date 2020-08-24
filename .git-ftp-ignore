@@ -1,0 +1,4 @@
+.gitignore
+readme.txt
+.git/*
+.git-ftp.log
