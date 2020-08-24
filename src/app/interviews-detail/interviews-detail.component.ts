@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "app-podcasts",
-  templateUrl: "./podcasts.component.html",
-  styleUrls: ["./podcasts.component.less"],
+  selector: "app-podcast-detail",
+  templateUrl: "./interviews-detail.component.html",
+  styleUrls: ["./interviews-detail.component.less"],
 })
-export class PodcastsComponent implements OnInit {
+export class InterviewsDetailComponent implements OnInit {
   podcasts: any[];
 
   constructor() {

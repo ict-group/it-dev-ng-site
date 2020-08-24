@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>it_IT</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <app-root></app-root>
+<head>
+  <meta charset="utf-8"/>
+  <title>it_IT</title>
+  <base href="/"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<body>
+<app-root></app-root>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var mediaElements = document.querySelectorAll("video, audio"),
+      total = mediaElements.length;
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var mediaElements = document.querySelectorAll("video, audio"),
-          total = mediaElements.length;
-
-        for (var i = 0; i < total; i++) {
-          new MediaElementPlayer(mediaElements[i], {
-            pluginPath:
-              "https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/",
-            shimScriptAccess: "always",
-            success: function () {
-              var target = document.body.querySelectorAll(".player"),
-                targetTotal = target.length;
-              for (var j = 0; j < targetTotal; j++) {
-                target[j].style.visibility = "visible";
-              }
-            },
-          });
-        }
+    for (var i = 0; i < total; i++) {
+      new MediaElementPlayer(mediaElements[i], {
+        pluginPath:
+          "https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/",
+        shimScriptAccess: "always",
+        success: function () {
+          var target = document.body.querySelectorAll(".player"),
+            targetTotal = target.length;
+          for (var j = 0; j < targetTotal; j++) {
+            target[j].style.visibility = "visible";
+          }
+        },
       });
-    </script>
-  </body>
+    }
+  });
+</script>
+</body>
 </html>

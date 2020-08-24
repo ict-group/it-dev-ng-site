@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 
 @Injectable()
-export class MyService {
-  mydata: MyDataType[] = [
+export class InterviewsService {
+  mydata: Podcasts[] = [
     {id: 1, value: 'Rossi'},
     {id: 2, value: 'Blue'},
     {id: 3, value: 'value_3'},
@@ -21,28 +21,14 @@ export class MyService {
   constructor() {
   }
 
-  getData(): Observable<MyDataType[]> {
-    const data = new Observable<MyDataType[]>((observer) => {
+  getData(): Observable<Podcasts[]> {
+    let data = new Observable<Podcasts[]>((observer) => {
       setTimeout(() => {
         observer.next(this.mydata);
       });
     });
     return data;
   }
-
-  getDatapodcast(): Observable<Podcasts[]> {
-    const data = new Observable<Podcasts[]>((observer) => {
-      setTimeout(() => {
-        observer.next(this.mydata);
-      });
-    });
-    return data;
-  }
-}
-
-export class MyDataType {
-  public id: number;
-  public value: string;
 }
 
 export class Podcasts {

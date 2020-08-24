@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import { MyService, MyDataType } from "../services/app.service";
-import { Observable } from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import {MyDataType, MyService} from '../services/app.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: "app-developers",
