@@ -1,8 +1,8 @@
 on: push
 name: Build and Publish Front End Framework Website
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  Angular-Build-Action:
+    name: Angular-Build-Action
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.1.0
