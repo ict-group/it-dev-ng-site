@@ -5,28 +5,22 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 1
 
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
 
-    - name: Build Project
-      run: |
-        npm install
-        npm run build --prod
-        
-    - name: List output files
-      run: ls /home/runner/work/it-developern-ng/it-developern-ng/dist/it-developern-ng
-      
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: dist/it-developern-ng/
-        git-ftp-args: --all
+      - name: Build Project
+        run: |
+          npm install
+          npm run build --prod
+
+      - name: Publish Image
+          uses: matootie/github-docker@v3.0.0
+          with:
+            accessToken: ${{ github.token }}
+            contextName: docker/Dockerfile
